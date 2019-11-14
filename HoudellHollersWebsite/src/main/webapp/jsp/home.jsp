@@ -5,21 +5,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Superhero Sightings</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">       
     </head>
     <body>
         <div class="container">
-            <h1>Spring MVC Application from Archetype</h1>
+            <h1 class="text-center">Houdell Hollers</h1>
             <hr/>
             <div class="navbar">
-                 <ul class="nav nav-tabs">
-                 <li role="presentation"><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
-                <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/hello/sayhi">Hello Controller</a></li>
+                <!-- All site navigation tabs are in this div -->
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
+                    <li role="presentation"><a href="${pageContext.request.contextPath}/viewPictures">Pictures</a></li>
+                    <li role="presentation"><a href="${pageContext.request.contextPath}/viewVideos">Videos</a></li>
+                    <li role="presentation"><a href="${pageContext.request.contextPath}/viewShows">Upcoming Shows</a></li>
+                    <li role="presentation"><a href="${pageContext.request.contextPath}/viewContact">Contact Us</a></li>
                 </ul>    
             </div>
-            <h2>${message}</h2>
+            <h3 class="text-center">We're the Houdell Hollers, a jam/blues band based in Louisville Kentucky.</h3>
         </div>
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="${pageContext.request.contextPath}/js/jquery-3.1.1.min.js"></script>
@@ -27,4 +32,3 @@
 
     </body>
 </html>
-
