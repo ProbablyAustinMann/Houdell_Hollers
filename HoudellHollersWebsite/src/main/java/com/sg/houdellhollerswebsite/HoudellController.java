@@ -8,29 +8,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HoudellController {
-        
-    @RequestMapping(value = "/viewhome", method = RequestMethod.GET)
-    public String displayHome(Map<String, Object> model) {
+    @RequestMapping(value = "/viewHome", method = RequestMethod.GET)
+    public String displayHeroes(Map<String, Object> model) {
         return "home";
     }
 
     @RequestMapping(value = "/viewPictures", method = RequestMethod.GET)
-    public String displayPicture(Map<String, Object> model) {
+    public String displayPictures(Map<String, Object> model) {
+        List<Picture> pictureList = dao.getAllPictures();
+        model.put("pictureList", pictureList);
         return "pictures";
     }
 
     @RequestMapping(value = "/viewVideos", method = RequestMethod.GET)
     public String displayVideos(Map<String, Object> model) {
+        List<Video> videoList = dao.getAllVideos();
+        model.put("videoList", videoList);
         return "videos";
     }
 
     @RequestMapping(value = "/viewShows", method = RequestMethod.GET)
     public String displayShows(Map<String, Object> model) {
+        List<Shows> showList = dao.getAllShows();
+        model.put("showList", showList);
         return "shows";
     }
 
     @RequestMapping(value = "/viewContact", method = RequestMethod.GET)
-    public String displayContct(Map<String, Object> model) {
-        return "contact";
+    public String displayContact(Map<String, Object> model) {
+        List<Contact> contactList = dao.getAllContacts();
+        model.put("contactList", contactList);
+        return "contacts";
     }
 }
