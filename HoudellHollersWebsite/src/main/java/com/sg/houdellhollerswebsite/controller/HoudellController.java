@@ -1,4 +1,4 @@
-package com.sg.houdellhollerswebsite;
+package com.sg.houdellhollerswebsite.controller;
 
 import java.util.List;
 import java.util.Map;
